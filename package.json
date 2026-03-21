@@ -12,15 +12,18 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "pnpm exec tsc --noEmit",
-      "pnpm run lint",
-      "pnpm exec prettier --write"
+    "*.{js,jsx,ts,tsx,json,css,md,yaml,yml,sql}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --fix-type suggestion --quiet"
     ]
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
