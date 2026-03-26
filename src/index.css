@@ -11,9 +11,9 @@
   --color-text: #d4c8ec;
   --color-muted: #6b5a8a;
   --color-white: #f3eeff;
-  --mono: "JetBrains Mono", monospace;
-  --serif: "DM Serif Display", serif;
-  --sans: "Manrope", sans-serif;
+  --font-jb-mono: "JetBrains Mono", monospace;
+  --font-dm-serif: "DM Serif Display", serif;
+  --font-manrope: "Manrope", sans-serif;
 }
 
 body {
@@ -21,5 +21,16 @@ body {
 }
 
 .btn {
-  @apply inline-flex items-center border rounded-sm px-6 py-3 uppercase font-mono text-[11px] tracking-[1.1px];
+  @apply inline-flex items-center border rounded-sm px-6 py-3 uppercase font-mono text-[11px] tracking-[1.1px] gap-2;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
