@@ -34,3 +34,39 @@ body {
     opacity: 0;
   }
 }
+
+.section-label {
+  @apply text-accent font-jb-mono text-[11px] tracking-[.2em] uppercase mb-3;
+}
+
+.section-title {
+  @apply font-dm-serif text-white font-bold mb-14;
+}
+
+.skill-card {
+  @apply bg-bg3 p-8;
+}
+
+.skill-card-label {
+  @apply text-accent uppercase font-jb-mono tracking-[.2em] text-[10px] mb-5;
+}
+
+.skill-tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.tag {
+  background: rgba(168, 85, 247, 0.08);
+  @apply font-jb-mono text-text text-[11px] border border-glow px-3 py-1 rounded-xs;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
