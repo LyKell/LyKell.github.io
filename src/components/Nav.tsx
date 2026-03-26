@@ -1,10 +1,10 @@
 export default function Nav() {
   return (
-    <nav className="fixed w-full flex flex-row justify-between px-15 py-5.5 font-mono tracking-widest items-center">
+    <nav className="fixed flex w-full flex-row items-center justify-between px-15 py-5.5 font-mono tracking-widest">
       <a className="text-accent text-[12px]" href="#hero">
         ks.dev
       </a>
-      <ul className="flex flex-row gap-9 text-muted text-[11px] font-mono uppercase tracking-[.12em]">
+      <ul className="text-muted flex flex-row gap-9 font-mono text-[11px] tracking-[.12em] uppercase">
         <li>
           <a href="#skills">Skills</a>
         </li>

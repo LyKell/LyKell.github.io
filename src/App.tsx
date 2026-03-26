@@ -1,6 +1,6 @@
-import Hero from "./components/hero/Hero";
-import Nav from "./components/Nav";
-import Skills from "./components/skills/Skills";
+import Hero from './components/hero/Hero';
+import Nav from './components/Nav';
+import Skills from './components/skills/Skills';
 
 function App() {
   return (

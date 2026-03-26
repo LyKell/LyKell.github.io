@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24
+          node-version: 20
           cache: 'pnpm'
 
       - name: Get pnpm store path
@@ -38,6 +38,9 @@ jobs:
 
       - name: Lint
         run: pnpm run lint
+
+      - name: Format
+        run: pnpm run format:check
 
   deploy:
     needs: [lint]
@@ -63,7 +66,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v6.3.0
         with:
-          node-version: 24
+          node-version: 20
           cache: 'pnpm'
 
       - name: Get pnpm store path
