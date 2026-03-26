@@ -57,7 +57,7 @@ importers:
         specifier: ^0.5.2
         version: 0.5.2(eslint@9.39.4(jiti@2.6.1))
       eslint-plugin-simple-import-sort:
-        specifier: ^12.1.1
+        specifier: ^12.1.0
         version: 12.1.1(eslint@9.39.4(jiti@2.6.1))
       gh-pages:
         specifier: ^6.3.0
@@ -78,7 +78,7 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2(prettier@3.8.1)
       typescript:
-        specifier: ~5.9.3
+        specifier: ^5.9.3
         version: 5.9.3
       typescript-eslint:
         specifier: ^8.57.0
