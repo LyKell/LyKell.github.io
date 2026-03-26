@@ -17,7 +17,7 @@
 }
 
 body {
-  @apply bg-bg text-text font-sans text-sm;
+  @apply bg-bg text-text font-manrope text-sm leading-[1.7];
 }
 
 .btn {
@@ -35,12 +35,16 @@ body {
   }
 }
 
+section {
+  @apply px-15 py-25;
+}
+
 .section-label {
   @apply text-accent font-jb-mono mb-3 text-[11px] tracking-[.2em] uppercase;
 }
 
 .section-title {
-  @apply font-dm-serif mb-14 font-bold text-white;
+  @apply font-dm-serif mb-14 leading-[1.1] font-bold text-white;
 }
 
 .skill-card {
@@ -58,6 +62,30 @@ body {
 .tag {
   background: rgba(168, 85, 247, 0.08);
   @apply font-jb-mono text-text border-glow rounded-xs border px-3 py-1 text-[11px];
+}
+
+.experience-card {
+  @apply relative pb-13;
+}
+
+.experience-card::before {
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+  @apply bg-bg border-accent absolute top-1.5 -left-11.5 h-3 w-3 rounded-[50%] border-2 content-[''];
+}
+
+.experience-card:hover::before {
+  box-shadow: 0 0 16px var(--glow);
+  @apply bg-accent;
+}
+
+.experience-card:last-child {
+  @apply pb-0;
+}
+
+.experience-bullets li::before {
+  @apply text-accent font-jb-mono absolute left-0 content-['›'];
 }
 
 @keyframes blink {
