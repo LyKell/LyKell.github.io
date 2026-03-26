@@ -1,9 +1,9 @@
-import CustomButton from "../buttons/CustomButton";
+import CustomButton from '../buttons/CustomButton';
 
 export default function Contact() {
   return (
     <>
-      <div className="flex flex-row gap-3 mt-12">
+      <div className="mt-12 flex flex-row gap-3">
         <CustomButton display="highlighted" text="Me contacter">
           <svg
             width="13"
