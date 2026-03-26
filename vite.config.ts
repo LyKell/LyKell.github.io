@@ -1,6 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default {
-  base: "/LyKell.github.io/",
+  base: "/",
   plugins: [tailwindcss()],
 };
