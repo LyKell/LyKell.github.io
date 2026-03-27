@@ -30,7 +30,12 @@ h2 {
 }
 
 .btn {
-  @apply inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-mono text-[11px] tracking-[1.1px] uppercase;
+  transition: all 0.25s;
+  @apply relative inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-mono text-[11px] tracking-[1.1px] uppercase no-underline;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 section {
