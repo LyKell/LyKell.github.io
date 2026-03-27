@@ -20,6 +20,10 @@ body {
   @apply bg-bg text-text font-manrope text-sm leading-[1.7];
 }
 
+h2 {
+  @apply font-bold;
+}
+
 .btn {
   @apply inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-mono text-[11px] tracking-[1.1px] uppercase;
 }
@@ -92,6 +96,11 @@ section {
 
 .experience-bullets li::before {
   @apply text-accent font-jb-mono absolute left-0 content-['›'];
+}
+
+.contact-title {
+  font-size: clamp(40px, 5vw, 64px);
+  @apply font-dm-serif mb-4 text-white;
 }
 
 @keyframes blink {
