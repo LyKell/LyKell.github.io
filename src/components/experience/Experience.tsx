@@ -2,7 +2,7 @@ import ExperienceCard from './ExperienceCard';
 
 export default function Experience() {
   return (
-    <section id="experience">
+    <section id="experience" className="bg-bg">
       <div>
         <div className="section-label">02 / Parcours</div>
         <h2 className="section-title">Expérience</h2>

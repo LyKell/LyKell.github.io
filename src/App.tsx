@@ -1,3 +1,4 @@
+import Contact from './components/contact/Contact';
 import Education from './components/education/Education';
 import Experience from './components/experience/Experience';
 import Hero from './components/hero/Hero';
@@ -12,6 +13,7 @@ function App() {
       <Skills />
       <Experience />
       <Education />
+      <Contact />
     </>
   );
 }
