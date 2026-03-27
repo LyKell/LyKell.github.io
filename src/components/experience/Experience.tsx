@@ -5,9 +5,7 @@ export default function Experience() {
     <section>
       <div>
         <div className="section-label">02 / Parcours</div>
-        <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)' }} className="section-title">
-          Expérience
-        </h2>
+        <h2 className="section-title">Expérience</h2>
       </div>
       <div className="border-line ml-3 border-l pl-10">
         <ExperienceCard
