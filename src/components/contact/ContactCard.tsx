@@ -1,4 +1,4 @@
-import CustomButton from '../buttons/CustomButton';
+import CustomButton from '../button/CustomButton';
 
 interface ContactCardProps {
   className?: string;
