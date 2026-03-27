@@ -44,14 +44,20 @@ section {
 }
 
 .section-title {
+  font-size: clamp(32px, 4vw, 48px);
   @apply font-dm-serif mb-14 leading-[1.1] font-bold text-white;
 }
 
-.skill-card {
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  @apply grid gap-0.5;
+}
+
+.card {
   @apply bg-bg3 p-8;
 }
 
-.skill-card-label {
+.card-label {
   @apply text-accent font-jb-mono mb-5 text-[10px] tracking-[.2em] uppercase;
 }
 
