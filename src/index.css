@@ -20,12 +20,22 @@ body {
   @apply bg-bg text-text font-manrope text-sm leading-[1.7];
 }
 
+body::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  @apply pointer-events-none fixed inset-0 z-1000 opacity-[0.025] content-[''];
+}
+
 h2 {
   @apply font-bold;
 }
 
 .btn {
-  @apply inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-mono text-[11px] tracking-[1.1px] uppercase;
+  transition: all 0.25s;
+  @apply relative inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-mono text-[11px] tracking-[1.1px] uppercase no-underline;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 section {
@@ -33,7 +43,7 @@ section {
 }
 
 footer span {
-  @apply font-jb-mono text-muted text-[10px] tracking-[.1em];
+  @apply font-jb-mono text-muted text-[10px] tracking-widest;
 }
 
 .section-label {
@@ -45,13 +55,69 @@ footer span {
   @apply font-dm-serif mb-14 leading-[1.1] font-bold text-white;
 }
 
+.nav-links a {
+  transition: color 0.2s;
+  @apply text-muted font-jb-mono relative text-[11px] tracking-[.12em] uppercase no-underline;
+}
+
+.nav-links a::after {
+  transition: width 0.3s;
+  @apply bg-accent absolute -bottom-1 left-0 h-px w-0 content-[''];
+}
+
+.nav-links a:hover {
+  @apply text-accent2;
+}
+
+.nav-links a:hover::after {
+  @apply w-full;
+}
+
+#hero::before {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size:
+    60px 60px,
+    60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
+  animation: grid-drift 20s linear infinite;
+  z-index: -10;
+  @apply absolute inset-0 opacity-[0.35] content-[''];
+}
+
+#hero::after {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+  animation: pulse-glow 6s ease-in-out infinite;
+  @apply pointer-events-none absolute top-[20%] left-[55%] h-125 w-125 rounded-[50%] content-[''];
+}
+
+.hero-tag::before {
+  @apply bg-accent inline-block h-px w-7 content-[''];
+}
+
 .card-grid {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   @apply grid gap-0.5;
 }
 
 .card {
-  @apply bg-bg3 p-8;
+  transition: background 0.3s;
+  @apply bg-bg3 relative overflow-hidden p-8;
+}
+
+.card:hover {
+  @apply bg-[#1a1230];
+}
+
+.card::before {
+  transition: height 0.4s ease;
+  @apply bg-accent absolute top-0 left-0 h-0 w-0.75 content-[''];
+}
+
+.card:hover::before {
+  @apply h-full;
 }
 
 .card-label {
@@ -64,7 +130,14 @@ footer span {
 
 .tag {
   background: rgba(168, 85, 247, 0.08);
+  transition: all 0.2s;
   @apply font-jb-mono text-text border-glow rounded-xs border px-3 py-1 text-[11px];
+}
+
+.tag:hover {
+  background: rgba(168, 85, 247, 0.2);
+  transform: translateY(-1px);
+  @apply border-accent text-white;
 }
 
 .experience-card {
@@ -104,5 +177,32 @@ footer span {
 
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes grid-drift {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+
+  100% {
+    background-position:
+      60px 60px,
+      60px 60px;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
   }
 }

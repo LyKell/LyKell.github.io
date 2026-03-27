@@ -6,7 +6,10 @@ interface ContactCardProps {
 
 export default function ContactCard({ className }: ContactCardProps) {
   return (
-    <div className={`mt-12 flex flex-row gap-3 ${className}`}>
+    <div
+      className={`contact-links mt-12 flex flex-wrap gap-3 ${className}`}
+      style={{ animation: 'fade-up 0.7s 0.65s forwards' }}
+    >
       <CustomButton display="highlighted" text="Me contacter" ref="mailto:sv-kevin@hotmail.fr">
         <svg
           width="13"

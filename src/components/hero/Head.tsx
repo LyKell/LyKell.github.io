@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <div className="text-accent font-jb-mono mb-6 flex items-center gap-3 text-[11px] tracking-[.2em] uppercase">
+      <div className="hero-tag text-accent font-jb-mono mb-6 flex items-center gap-3 text-[11px] tracking-[.2em] uppercase">
         Software Engineer · Paris
       </div>
       <h1
