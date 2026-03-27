@@ -16,6 +16,10 @@
   --font-manrope: 'Manrope', sans-serif;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   @apply bg-bg text-text font-manrope text-sm leading-[1.7];
 }
@@ -35,7 +39,7 @@ h2 {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  @apply transform-[translateY(-2px)];
 }
 
 section {
@@ -83,8 +87,7 @@ footer span {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
   animation: grid-drift 20s linear infinite;
-  z-index: -10;
-  @apply absolute inset-0 opacity-[0.35] content-[''];
+  @apply absolute inset-0 -z-10 opacity-[0.35] content-[''];
 }
 
 #hero::after {
@@ -93,8 +96,24 @@ footer span {
   @apply pointer-events-none absolute top-[20%] left-[55%] h-125 w-125 rounded-[50%] content-[''];
 }
 
+.hero-name {
+  font-size: clamp(52px, 8vw, 96px);
+  animation: fade-up 0.7s 0.35s forwards;
+  @apply font-dm-serif leading-none font-bold tracking-[-.02em] text-white opacity-0;
+}
+
+.hero-tag {
+  animation: fade-up 0.6s 0.2s forwards;
+  @apply text-accent font-jb-mono mb-6 flex items-center gap-3 text-[11px] tracking-[.2em] uppercase opacity-0;
+}
+
 .hero-tag::before {
   @apply bg-accent inline-block h-px w-7 content-[''];
+}
+
+.hero-role {
+  animation: fade-up 0.7s 0.5s forwards;
+  @apply font-jb-mono text-muted flex items-center gap-1.5 text-[13px] opacity-0;
 }
 
 .card-grid {
@@ -129,15 +148,13 @@ footer span {
 }
 
 .tag {
-  background: rgba(168, 85, 247, 0.08);
   transition: all 0.2s;
-  @apply font-jb-mono text-text border-glow rounded-xs border px-3 py-1 text-[11px];
+  @apply font-jb-mono text-text border-glow rounded-xs border bg-[#a855f714] px-3 py-1 text-[11px];
 }
 
 .tag:hover {
-  background: rgba(168, 85, 247, 0.2);
   transform: translateY(-1px);
-  @apply border-accent text-white;
+  @apply border-accent bg-glow text-white;
 }
 
 .experience-card {
@@ -204,5 +221,17 @@ footer span {
   50% {
     transform: scale(1.15);
     opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
