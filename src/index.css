@@ -28,19 +28,12 @@ h2 {
   @apply inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-mono text-[11px] tracking-[1.1px] uppercase;
 }
 
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
 section {
   @apply px-15 py-25;
+}
+
+footer span {
+  @apply font-jb-mono text-muted text-[10px] tracking-[.1em];
 }
 
 .section-label {
