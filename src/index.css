@@ -43,7 +43,7 @@ section {
 }
 
 footer span {
-  @apply font-jb-mono text-muted text-[10px] tracking-[.1em];
+  @apply font-jb-mono text-muted text-[10px] tracking-widest;
 }
 
 .section-label {
@@ -103,7 +103,21 @@ footer span {
 }
 
 .card {
-  @apply bg-bg3 p-8;
+  transition: background 0.3s;
+  @apply bg-bg3 relative overflow-hidden p-8;
+}
+
+.card:hover {
+  @apply bg-[#1a1230];
+}
+
+.card::before {
+  transition: height 0.4s ease;
+  @apply bg-accent absolute top-0 left-0 h-0 w-0.75 content-[''];
+}
+
+.card:hover::before {
+  @apply h-full;
 }
 
 .card-label {
@@ -116,7 +130,14 @@ footer span {
 
 .tag {
   background: rgba(168, 85, 247, 0.08);
+  transition: all 0.2s;
   @apply font-jb-mono text-text border-glow rounded-xs border px-3 py-1 text-[11px];
+}
+
+.tag:hover {
+  background: rgba(168, 85, 247, 0.2);
+  transform: translateY(-1px);
+  @apply border-accent text-white;
 }
 
 .experience-card {
