@@ -2,7 +2,7 @@ import SkillsCard from './SkillsCard';
 
 export default function Skills() {
   return (
-    <section className="bg-bg2 px-15 py-25">
+    <section className="bg-bg2">
       <div>
         <div className="section-label">01 / Compétences</div>
         <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)' }} className="section-title">
