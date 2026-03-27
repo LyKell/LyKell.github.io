@@ -3,7 +3,7 @@ import EducationCard from './EducationCard';
 
 export default function Education() {
   return (
-    <section className="bg-bg2">
+    <section id="education" className="bg-bg2">
       <div>
         <div className="section-label">03 / Formation</div>
         <h2 className="section-title">Diplômes</h2>
