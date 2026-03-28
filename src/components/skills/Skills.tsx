@@ -1,14 +1,15 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import Card from '../Card';
 import SkillsCard from './SkillsCard';
 
 export default function Skills() {
   return (
     <section id="skills" className="bg-bg2">
-      <div>
+      <div className="reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <div className="section-label">01 / Compétences</div>
         <h2 className="section-title">Stack & Outils</h2>
       </div>
-      <div className="card-grid">
+      <div className="card-grid reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <Card label="Langages">
           <SkillsCard tags={['TypeScript', 'JavaScript', 'Java', 'Scala']} />
         </Card>

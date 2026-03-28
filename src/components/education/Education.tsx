@@ -1,14 +1,15 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import Card from '../Card';
 import EducationCard from './EducationCard';
 
 export default function Education() {
   return (
     <section id="education" className="bg-bg2">
-      <div>
+      <div className="reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <div className="section-label">03 / Formation</div>
         <h2 className="section-title">Diplômes</h2>
       </div>
-      <div className="card-grid">
+      <div className="card-grid reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <Card label="2020 — 2022">
           <EducationCard
             diploma={{ title: 'Master Logiciel et Ingénierie des Données', location: 'Université Gustave Eiffel' }}
