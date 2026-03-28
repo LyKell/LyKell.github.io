@@ -417,3 +417,39 @@ footer span {
   background: rgba(168, 85, 247, 0.3);
   color: var(--white);
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 18px 24px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  section {
+    padding: 72px 24px;
+  }
+
+  #hero {
+    padding: 100px 24px 60px;
+  }
+
+  footer {
+    padding: 20px 24px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  #contact {
+    padding: 80px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+}
