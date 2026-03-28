@@ -4,7 +4,7 @@ import SkillsCard from './SkillsCard';
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-bg2">
+    <section id="skills">
       <div className="reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <div className="section-label">01 / Compétences</div>
         <h2 className="section-title">Stack & Outils</h2>

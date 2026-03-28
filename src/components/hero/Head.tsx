@@ -5,10 +5,10 @@ export default function Head() {
       <h1 className="hero-name">
         Kévin
         <br />
-        <em className="text-accent2 italic">SAVANE</em>
+        <em>SAVANE</em>
       </h1>
       <p className="hero-role">
-        <span className="">TypeScript · NestJS · React</span>
+        <span>TypeScript · NestJS · React</span>
         <span className="blink"></span>
       </p>
     </>
