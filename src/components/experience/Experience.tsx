@@ -1,13 +1,15 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useStaggerReveal } from '../../hooks/useStaggerReveal';
 import ExperienceCard from './ExperienceCard';
 
 export default function Experience() {
   return (
     <section id="experience" className="bg-bg">
-      <div>
+      <div className="reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <div className="section-label">02 / Parcours</div>
         <h2 className="section-title">Expérience</h2>
       </div>
-      <div className="border-line ml-3 border-l pl-10">
+      <div className="border-line ml-3 border-l pl-10" ref={useStaggerReveal<HTMLDivElement>('.experience-card')}>
         <ExperienceCard
           startDate={'NOV. 2022'}
           job={'Software Engineer'}
