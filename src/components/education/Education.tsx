@@ -4,7 +4,7 @@ import EducationCard from './EducationCard';
 
 export default function Education() {
   return (
-    <section id="education" className="bg-bg2">
+    <section id="education">
       <div className="reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <div className="section-label">03 / Formation</div>
         <h2 className="section-title">Diplômes</h2>

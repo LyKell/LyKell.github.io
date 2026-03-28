@@ -4,12 +4,12 @@ import ExperienceCard from './ExperienceCard';
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-bg">
+    <section id="experience">
       <div className="reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <div className="section-label">02 / Parcours</div>
         <h2 className="section-title">Expérience</h2>
       </div>
-      <div className="border-line ml-3 border-l pl-10" ref={useStaggerReveal<HTMLDivElement>('.experience-card')}>
+      <div className="experience-list" ref={useStaggerReveal<HTMLDivElement>('.experience-card')}>
         <ExperienceCard
           startDate={'NOV. 2022'}
           job={'Software Engineer'}
