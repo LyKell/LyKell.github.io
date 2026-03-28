@@ -11,19 +11,19 @@ export default function Skills() {
       </div>
       <div className="card-grid reveal" ref={useScrollReveal<HTMLDivElement>()}>
         <Card label="Langages">
-          <SkillsCard tags={['TypeScript', 'JavaScript', 'Java', 'Scala']} />
+          <SkillsCard tags={['TypeScript', 'JavaScript', 'Java', 'Scala', 'Python']} />
         </Card>
         <Card label="Frameworks">
-          <SkillsCard tags={['NestJS', 'React.js', 'Next.js', 'Node.js']} />
+          <SkillsCard tags={['NestJS', 'React', 'Next.js', 'Node.js']} />
         </Card>
         <Card label="Outils & Plateformes">
-          <SkillsCard tags={['Payload CMS']} />
+          <SkillsCard tags={['Git', 'Docker', 'GitHub Actions', 'PostgreSQL', 'Payload CMS', 'Bruno']} />
         </Card>
         <Card label="Langues">
           <SkillsCard tags={['Français', 'Anglais', 'Mandarin']} />
         </Card>
         <Card label="Logiciels">
-          <SkillsCard tags={['Visual Studio Code', 'Git']} />
+          <SkillsCard tags={['Visual Studio Code', 'iTerm2']} />
         </Card>
       </div>
     </section>
